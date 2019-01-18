@@ -1,0 +1,37 @@
+body {
+  background-color: #f1dbd3;
+}
+* {
+  font-family: 'Segoe UI'; 
+}
+h1, h2 {
+  color: blue;
+}
+i {
+  color: yellow;
+}
+
+.note {
+  font-family: 'Courier New';
+}
+
+#top {
+  color: orange;
+}
+
+#introduction {
+  color: #219693;
+}
+
+li>a {
+  color: brown;
+  text-decoration: underline;
+}
+
+p a {
+  color: #7d0868;
+}
+
+h1~p {
+  color: #059669fc;
+}
