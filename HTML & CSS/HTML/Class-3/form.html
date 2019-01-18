@@ -1,0 +1,38 @@
+<html>
+	<body>
+		<h1>Forms !</h1>
+		<form action="http://www.example.com/subscribe.php">
+			<fieldset>
+				<legend>
+					LOGIN FORM
+				</legend>
+				<label for="username">Username:
+				<input type="text" id="username" name="username" required="required" />
+				<label for="password">Password:
+				<input type="password" id="password" name="password" required="required"/>
+				<p>What did you think of this gig?</p>
+				<textarea name="comments" cols="20" rows="4">Enter Your Comment !</textarea>
+				<p>Please select your favorite genre:
+			 	<br />
+				 <input type="checkbox" name="genre" value="rock"
+					 checked="checked" /> Rock
+				 <input type="checkbox" name="genre" value="pop" />
+					 Pop
+				 <input type="checkbox" name="genre" value="jazz" />
+					 Jazz
+			 	</p>
+			</fieldset>
+		 
+			<p>What device do you listen to music on?</p>
+			 <select name="devices" >
+				<option value="ipod">iPod</option>
+				<option value="radio">Radio</option>
+				<option value="computer">Computer</option>
+			 </select>
+			 <p>Upload your song in MP3 format: <input type="file" name="user-song" /> </p>
+			 <button><img src="images/plus.png" alt="add"
+					 width="10" height="10" /> Add</button>
+			 <input type="hidden" name="bookmark" value="lyrics" />
+		</form>
+	</body>
+</html>
