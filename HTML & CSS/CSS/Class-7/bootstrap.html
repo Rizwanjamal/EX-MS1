@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Bootstrap Demo</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Page 1-1</a></li>
+                            <li><a href="#">Page 1-2</a></li>
+                            <li><a href="#">Page 1-3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Page 2</a></li>
+                    <li><a href="#">Page 3</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <h2>Vertical (basic) form</h2>
+        <form action="/action_page.php">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" name="remember"> Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+        <h2>Button Styles</h2>
+        <button type="button" class="btn">Basic</button>
+        <button type="button" class="btn btn-default">Default</button>
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-link">Link</button>
+        <h2>Button Group</h2>
+        <p>The .btn-group class creates a button group:</p>
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary">Apple</button>
+            <button type="button" class="btn btn-primary">Samsung</button>
+            <button type="button" class="btn btn-primary">Sony</button>
+        </div>
+        <h2>Glyphicon Examples</h2>
+        <p>Envelope icon: <i class="glyphicon glyphicon-heart"></i></p>
+        <p>Envelope icon as a link:
+            <a href="#"><span class="glyphicon glyphicon-envelope"></span></a>
+        </p>
+        <p>Search icon: <span class="glyphicon glyphicon-search"></span></p>
+        <p>Search icon on a button:
+            <button type="button" class="btn btn-default">
+                <span class="glyphicon glyphicon-search"></span> Search
+            </button>
+        </p>
+        <p>Search icon on a styled button:
+            <button type="button" class="btn btn-info">
+                <span class="glyphicon glyphicon-search"></span> Search
+            </button>
+        </p>
+        <p>Print icon: <span class="glyphicon glyphicon-print"></span></p>
+        <p>Print icon on a styled link button:
+            <a href="#" class="btn btn-success btn-md">
+                <span class="glyphicon glyphicon-print"></span> Print
+            </a>
+        </p>
+        <h2>Dropdowns</h2>
+        <p>The .dropdown class is used to indicate a dropdown menu.</p>
+        <p>Use the .dropdown-menu class to actually build the dropdown menu.</p>
+        <p>To open the dropdown menu, use a button or a link with a class of .dropdown-toggle and
+            data-toggle="dropdown".</p>
+        <div class="dropdown">
+            <button class="btn btn-danger dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+                <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JavaScript</a></li>
+            </ul>
+        </div>
+        <h2>Dynamic Pills</h2>
+        <p>To make the tabs toggleable, add the data-toggle="pill" attribute to each link. Then add a .tab-pane class
+            with a unique ID for every tab and wrap them inside a div element with class .tab-content.</p>
+        <ul class="nav nav-pills">
+            <li><a data-toggle="pill" href="#home">Home</a></li>
+            <li><a data-toggle="pill" href="#menu1">Menu 1</a></li>
+            <li><a data-toggle="pill" href="#menu2">Menu 2</a></li>
+            <li><a data-toggle="pill" href="#menu3">Menu 3</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+                <h3>HOME</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.</p>
+            </div>
+            <div id="menu1" class="tab-pane fade">
+                <h3>Menu 1</h3>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+            </div>
+            <div id="menu2" class="tab-pane fade">
+                <h3>Menu 2</h3>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                    totam rem aperiam.</p>
+            </div>
+            <div id="menu3" class="tab-pane fade">
+                <h3>Menu 3</h3>
+                <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            </div>
+        </div>
+        <h2>Badges: </h2>
+        <a href="#">News <span class="badge">5</span></a><br>
+        <a href="#">Comments <span class="badge">10</span></a><br>
+        <a href="#">Updates <span class="badge">2</span></a><br>
+        <button type="button" class="btn btn-primary">Primary <span class="badge">7</span></button>
+        <h2>Progress Bar: </h2>
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0"
+                aria-valuemax="100" style="width:40%">
+                Rizwan (40% hot)
+            </div>
+        </div>
+        <h2>Grid System</h2>
+        <ul>
+            <li>xs (for phones - screens less than 768px wide) </li>
+            <li>sm (for tablets - screens equal to or greater than 768px wide)</li>
+            <li>md (for small laptops - screens equal to or greater than 992px wide)</li>
+            <li>lg (for laptops and desktops - screens equal to or greater than 1200px wide)</li>
+        </ul>
+        <div class="row">
+            <div style="height: 50px;background-color: orange;" class="col-sm-4 col-xs-4 col-md-12">Box1</div>
+            <div style="height: 50px;background-color: lawngreen;" class="col-sm-4 col-xs-4 col-md-12">Box2</div>
+            <div style="height: 50px;background-color: lightseagreen;" class="col-sm-4 col-xs-4 col-md-12">Box3</div>
+        </div>
+    </div>
+</body>
+
+</html>
