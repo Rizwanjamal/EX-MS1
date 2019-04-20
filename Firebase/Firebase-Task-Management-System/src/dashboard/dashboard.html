@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div class="container">
+      <div style="display: flow-root;">
+        <button type="submit" class="btn btn-primary float-right" onclick="logout()">Logout</button>
+      </div>
+      <div style="text-align: center">
+        <div>
+            <h2 id="userName" style="margin-bottom: 25px;"></h2>
+            <h1 style="margin-bottom: 25px;">All Tasks</h1>
+          <button class="btn btn-primary" onclick="addTask()">Add Task!</button>
+          <div class="row ">
+            <div class="col-md-4"></div>
+          </div>
+          <div class="table-responsive" id="expenses">
+            <table class="table table-bordered table-hover table-border">
+              <thead class="hover">
+                <tr>
+                    <th>Description</th>
+                    <th>Priority</th>
+                </tr>
+            </thead>
+            <tbody id="body">
+
+            </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase-firestore.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAwIcUllm64-F8jx5GTd1q0q7rK4inkooI",
+            authDomain: "fir-demo-3f683.firebaseapp.com",
+            databaseURL: "https://fir-demo-3f683.firebaseio.com",
+            projectId: "fir-demo-3f683",
+            storageBucket: "fir-demo-3f683.appspot.com",
+            messagingSenderId: "94358973597"
+        };
+      firebase.initializeApp(config);
+    </script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
