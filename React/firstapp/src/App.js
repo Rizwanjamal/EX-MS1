@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Search from './Search';
+import Table from './Table';
 import logo from "./logo.svg";
 import "./App.css";
 
@@ -26,7 +28,7 @@ class App extends Component {
     super(props);
     this.state = {
       list,
-      searchTerm: ''
+      searchTerm: 'react'
     };
   }
 
@@ -40,38 +42,21 @@ class App extends Component {
     this.setState({searchTerm: event.target.value})
   }
 
-  isSearched = searchTerm => item =>
-    item.title.toLowerCase().includes(searchTerm.toLowerCase());
-
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <form>
-            <input type="text" onChange={(event) => this.onSearchChange(event)}/>
-          </form>
+          <Search 
+            value = {this.state.searchTerm}
+            changeMethod = {this.onSearchChange}
+          />
 
-          {this.state.list.filter(this.isSearched(this.state.searchTerm)).map(item => {
-            return (
-              <div key={item.objectID}>
-                <span>
-                  <a href={item.url}>{item.title}</a>
-                </span>
-                <span>{item.author}</span>
-                <span>{item.num_comments}</span>
-                <span>{item.points}</span>
-                <span>
-                  <button
-                    onClick={() => this.removeItem(item.objectID)}
-                    type="button"
-                  >
-                    Dismiss
-                  </button>
-                </span>
-              </div>
-            );
-          })}
+          <Table 
+            list = {this.state.list}
+            searchTerm = {this.state.searchTerm}
+            removeItem = {this.removeItem}
+          />
         </header>
       </div>
     );
